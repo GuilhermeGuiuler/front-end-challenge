@@ -3,7 +3,8 @@ import { userDetails } from '../../services/api'
 export const Types = {
   FETCH_USER: '@user/FETCH_USER',
   FETCH_USER_SUCCESS: '@user/FETCH_USER_SUCCESS',
-  FETCH_USER_ERROR: '@user/FETCH_USER_ERROR'
+  FETCH_USER_ERROR: '@user/FETCH_USER_ERROR',
+  CLEAR_USER: '@user/CLEAR_USER'
 }
 
 export const Creators = {
@@ -23,6 +24,10 @@ export const Creators = {
     payload: {
       error
     }
+  }),
+
+  clearUser: () => ({
+    type: Types.CLEAR_USER
   })
 }
 
@@ -62,6 +67,9 @@ export default function home(state = INITIAL_STATE, action) {
         loading: false,
         error: action.payload.error
       }
+    case Types.CLEAR_USER:
+      console.log('thawan gay')
+      return INITIAL_STATE
     default:
       return state
   }

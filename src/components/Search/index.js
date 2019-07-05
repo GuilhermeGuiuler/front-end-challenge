@@ -14,24 +14,20 @@ function Search({ history }) {
   const search = useSelector(state => state.home)
   const dispatch = useDispatch()
 
-  function handleSearch() {
+  function handleSearch() {  
     dispatch(getUser(name))
   }
 
   useEffect(() => {
     if (!search.error && !search.loading) {
-      setGoPerfil(true)
+      history.push(`/perfil/${name}`)
     }
   }, [search.loading])
 
-  if (goPerfil) {
-    return <Redirect push to={`/perfil/${name}`} />
-  }
-
   return (
     <Container>
-      {console.log('SEARCH', history)}
-      <Wrap>
+      {console.log(search)}
+      <Wrap>                                
         <Field
           autoFocus
           placeholder="digite aqui o usuário"
