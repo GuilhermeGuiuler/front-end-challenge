@@ -1,59 +1,68 @@
-# :running: + :racehorse: === Centauro - Teste de Frontend :checkered_flag:
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Available Scripts
 
-**Proposta:**
-Desenvolver uma aplicação *client-side* que, ao consultar a GitHub API, apresente os repositórios mais populares de um determinado usuário. A aplicação desenvolvida deve funcionar nos navegadores mais recentes do mercado, além de ser responsiva.
+In the project directory, you can run:
 
-Este teste irá testar suas capacidades com JavaScript, React e seu player de store favorito, nosso time utiliza mobx, mas fique a vontade para utilizar o que você se sentir mais a vontade(redux, context, etc...), assim como suas habilidades para interagir eficientemente com APIs.
+### `npm start`
 
-**API de apoio:** https://developer.github.com/v3/
+Runs the app in the development mode.<br>
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-## Requisitos
-- Como um usuário, eu quero buscar por um usuário do GitHub, para que possa ver os repositórios mais populares desse usuário
+The page will reload if you make edits.<br>
+You will also see any lint errors in the console.
 
-- Como um usuário, eu quero ver os detalhes do usuário que busquei (nº de seguidores, nº de seguidos, avatar, e-mail e bio), para que possa saber mais sobre o usuário
+### `npm test`
 
-- Como um usuário, eu quero ver a listagem dos repositórios do usuário que busquei, ordenados em ordem decrescente pelas estrelas (do repositório), para que possa ver quais são os repositórios favoritados do usuário
+Launches the test runner in the interactive watch mode.<br>
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-- Como um usuário, eu quero alterar a ordem da listagem de repositórios, para que possa analisá-la em ordem crescente (por exemplo)
+### `npm run build`
 
-- Como um usuário, eu quero ver uma página detalhada de cada repositório (nome, descrição, nº de estrelas, linguagem principal e *link* para o repositório) na listagem, para que eu possa entender o conteúdo de cada repositório e acessar os que me interessar
+Builds the app for production to the `build` folder.<br>
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-## Definition of Done
-- **Ser responsivo!** Deve atender dispositivos com a resolução no mínimo de 320 x 480;
-- **É obrigatório o uso de rotas.**
-- **É obrigatório o uso de store.**
+The build is minified and the filenames include the hashes.<br>
+Your app is ready to be deployed!
 
-## Critérios de Avaliação
-- *Organização:* o projeto está bem estruturado, documentado e faz uso de Git?
-- *Tecnologia:* utiliza as tecnologias mais recentes (e estáveis) do mercado?
-- *Coerência:* os requisitos foram atendidos?
-- *Boas práticas:* o projeto segue boas práticas de desenvolvimento, incluindo segurança e otimização?
-- *Qualidade:* possui testes automatizados e integração contínua?
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-#### Pontos Extras
-- Uso de CSS-in-JS (Aphrodite, Styled Components ou Emotion)
-- Documentação
-- Layout bonito
-    - Tabelão com tudo faz voltar 5 casas
-- Hospedar a aplicação (Heroku, Firebase, GH pages, etc).
+### `npm run eject`
 
-## Observação
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-A performance e a adequação dos recursos serão considerados durante o processo de avaliação. Alem disso, a avaliação ocorrerá em todos os componentes do projeto (JavaScript, HTML e CSS).
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-As APIs a serem consumidas são:
+Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-**1. Detalhes de um usuário -** https://api.github.com/users/{username}
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-**2. Repositórios de um usuário -** https://api.github.com/users/{username}/repos
+## Learn More
 
-**3. Detalhes de um repositório -** https://api.github.com/repos/{full_name}
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-## Processo de submissão
+To learn React, check out the [React documentation](https://reactjs.org/).
 
-O desafio deve ser entregue pelo GitHub. As URLs devem constar no README.
+### Code Splitting
 
-Qualquer dúvida em relação ao desafio, responderemos por e-mail.
+This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
 
-Bom trabalho!
+### Analyzing the Bundle Size
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+
+### Making a Progressive Web App
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+
+### Advanced Configuration
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+
+### Deployment
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+
+### `npm run build` fails to minify
+
+This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
