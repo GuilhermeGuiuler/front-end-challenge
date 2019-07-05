@@ -1,6 +1,7 @@
 import React from 'react'
 
 import Search from '../../components/Search'
+import { withRouter } from 'react-router-dom'
 
 import LogoImage from '../../assets/images/logo.png'
 
@@ -19,4 +20,4 @@ function Home({ history }) {
   )
 }
 
-export default Home
+export default withRouter(Home)

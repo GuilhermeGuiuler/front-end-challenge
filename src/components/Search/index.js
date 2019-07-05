@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { withRouter } from 'react-router-dom'
+import { Redirect, withRouter } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { FiChevronRight } from 'react-icons/fi'
 import Loader from 'react-loader-spinner'
@@ -10,7 +10,7 @@ import { Container, Wrap, Action, Field, ErrorBox, ErrorText } from './styles'
 
 function Search({ history }) {
   const [name, setName] = useState('')
-  // const [isLoading, setLoading] = useState(false)
+  const [goPerfil, setGoPerfil] = useState(false)
   const search = useSelector(state => state.home)
   const dispatch = useDispatch()
 
@@ -20,13 +20,17 @@ function Search({ history }) {
 
   useEffect(() => {
     if (!search.error && !search.loading) {
-      history.push(`/perfil/${name}`)
+      setGoPerfil(true)
     }
   }, [search.loading])
 
+  if (goPerfil) {
+    return <Redirect push to={`/perfil/${name}`} />
+  }
+
   return (
     <Container>
-      {console.log(history)}
+      {console.log('SEARCH', history)}
       <Wrap>
         <Field
           autoFocus
